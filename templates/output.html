@@ -1,0 +1,103 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>HDPS</title>
+
+  <!-- CSS  -->
+  <link href="{% static 'css/materialize.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="{% static 'css/style.css' %}" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+    
+    tr:nth-child(even) {
+      background-color: #dddddd;
+    }
+    </style>
+</head>
+<body>
+  <nav class="darken" role="navigation">
+    <div 
+      class="nav-wrapper container  "><a id="logo-container"  class="brand-logo">Heart Disease Prediction System </a>
+       
+    </div>
+  </nav>
+  
+
+    <div class="con">
+  
+      <br> 
+      
+      
+    
+
+<!---
+     <table>
+      <tr>
+        <th>Machine Leanring Algorithm</th>
+        <th>Output</th>
+      </tr>
+      <tr>
+        <td>Logistic Regression</td>
+        <td>{{ output1 }}</td>
+      </tr>
+      <tr>
+        <td>Support Vector Machine</td>
+        <td>{{outputsvc}}</td>
+      </tr>
+      <tr>
+        <td>RandomForest</td>
+        <td>{{outputran}}</td>
+      </tr>
+      <tr>
+        <td>Gussian navy bayes</td>
+        <td>{{outputnav}}</td>
+      </tr>
+      <tr>
+        <td>Knn-neigbour</td>
+        <td>{{outputknn}}</td>
+      </tr>
+      <tr>
+        <td>Dicision tree</td>
+        <td>{{outputdt}}</td>
+      </tr>
+    </table> -------->
+
+      <br> <br>
+
+      {% if output1 <= 50 %}
+        <h5 style="text-align:center;">Please continue your healthy habit</h5> <br>
+        
+      {% endif %}
+      {% if output1 >= 50 %}
+        <h5 style="text-align:center;"> Your are Prone to Heart Disease </h5><br>
+        <h5 style="text-align:center;"><a  class="blue-grey darken-4 btn  waves-effect waves-light" href="{% url 'prevention' %}">View Prevention</a></h5>
+      
+      {% endif %}
+    
+        
+  </div>
+
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="{% static 'js/materialize.js' %}"></script>
+  <script src="{% static 'js/init.js' %}"></script>
+
+  </body>
+</html>

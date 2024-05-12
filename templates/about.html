@@ -1,0 +1,81 @@
+
+ 
+  {% extends 'base_layout.html' %}
+  {% load static %}
+  
+        
+        
+        {% block content %}
+
+<section class="slider sliderv z-depth-3">
+    <ul class="slides">
+      <li>
+        <img src="https://d112y698adiu2z.cloudfront.net/photos/production/software_photos/002/584/244/datas/original.png"> 
+        <div class="caption center-align">
+          <h3>ABOUT </h3>
+          <h5 class="light grey-text text-lighten-3"> Learn more about HDPS  <br> and how HDPS works.
+          </h5>
+        </div>
+      </li>
+      
+    </ul>
+  </section>
+  
+  <br> <br>
+  
+  
+  <!-- Who we are -->
+  
+  <section>
+    <h2 class="center-align"> What is HDPS?</h2> 
+    </section>
+    <br>
+    <section >
+  
+      <div class="row" style="width: 85%; margin: auto;">
+        <div class="col s12 m6">
+          <img src="https://pbs.twimg.com/media/EMegdyIX0AAwahp.jpg"  class="responsive-img">
+  
+        </div>
+        <div class="col s12 m5 offset-m1">
+          <p style="font-size:20px; text-align: justify;">
+            Heart Disease Prediction System is a user-friendly web-based application 
+            which predicts heart disease using Machine Learning Algorithm. 
+            The data extracted from patient includes different 13 parameters like blood pressure, age, sex etc.
+            The result is extracted by processing patient’s dataset and a data of patients to whom we need to predict the chance 
+            of occurrence of a heart disease.
+
+          </p>
+        </div>
+      </div>
+  
+    </section>
+  <br> <br> <br>
+    <section>
+      <h2 class="center-align"> How can you use HDPS?</h2> 
+      </section>
+      <br>
+      <section >
+        <div class="row">
+        </div>
+        <div class="row" style="width: 85%; margin: auto;">
+          
+          <div class="col s12 m5 ">
+            <p style="font-size:20px; text-align: justify;">
+              Anyone with a device having browser and internet can easily use Heart Disease Prediction System. If you want to predict heart 
+              disease using HDPS, all you need is to enter accurate value of 13 different attributes that system asks like age, sex, 
+              blood pressure and so on. HDPS will then return the chances of having heart disease in probability which resides from 0-1. 
+              In addition to that, if you want to save data for future purpose and want guidance on what to do next, you can simply sign
+               up to the system which provides all those features.   
+            </p>
+            </div>
+            <div class="col s12 m6 offset-m1">
+              <img src="{% static 'img/img.png' %}"  class="responsive-img">
+        </div>
+      </section> 
+
+      <br> <br> <br> <br> 
+        
+
+          
+          {% endblock %}
